@@ -17,7 +17,7 @@ pipeline {
         unstash 'venv'
         sh 'apt install nodejs'
         sh 'venv/bin/sam build --beta-features'
-        sh './.aws-sam/build/HelloWorldFunction'
+        sh 'ls ./.aws-sam/build/HelloWorldFunction'
         stash includes: '**/.aws-sam/**/*', name: 'aws-sam'
       }
     }
