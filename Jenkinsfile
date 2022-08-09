@@ -15,6 +15,7 @@ pipeline {
     stage('Build') {
       steps {
         unstash 'venv'
+        sh 'sudo apt install nodejs'
         sh 'venv/bin/sam build --beta-features'
         stash includes: '**/.aws-sam/**/*', name: 'aws-sam'
       }
