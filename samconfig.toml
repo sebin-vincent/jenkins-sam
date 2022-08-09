@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "sam-jenkins-app"
+s3_bucket = "jenkins-sam-lambda-deployment"
+s3_prefix = "sam-jenkins-app"
+region = "ap-south-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
+disable_rollback = true
