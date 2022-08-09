@@ -4,6 +4,7 @@ pipeline {
         image 'python:3'
       }
   }
+  tools {nodejs "NODEJS"}
   stages {
     stage('Install sam-cli') {
       steps {
