@@ -1,7 +1,7 @@
 pipeline {
   agent {
       docker {
-        image 'python:3'
+        image 'nikolaik/python-nodejs'
       }
   }
   tools {nodejs "NODEJS"}
